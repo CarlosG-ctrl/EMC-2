@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#303034","surface-dim":"#131313","on-primary-fixed":"#001a41","surface-container-high":"#2a2a2a","outline-variant":"#414754","inverse-primary":"#005bc0","tertiary-fixed":"#e4e1e7","error-container":"#93000a","on-tertiary-container":"#29292d","secondary-container":"#4b4b51","on-tertiary-fixed-variant":"#47464b","secondary-fixed":"#e4e1e9","on-error-container":"#ffdad6","on-primary-fixed-variant":"#004493","primary-fixed":"#d8e2ff","surface-container-low":"#1c1b1b","on-primary":"#002e68","tertiary":"#c8c5cb","secondary":"#c7c5cd","surface":"#131313","on-secondary":"#303036","on-secondary-fixed":"#1b1b21","on-surface-variant":"#c1c6d6","surface-container-highest":"#353534","surface-tint":"#adc6ff","primary-fixed-dim":"#adc6ff","surface-container-lowest":"#0e0e0e","on-error":"#690005","surface-variant":"#353534","tertiary-fixed-dim":"#c8c5cb","on-tertiary-fixed":"#1b1b1f","secondary-fixed-dim":"#c7c5cd","surface-container":"#201f1f","primary-container":"#4a8eff","surface-bright":"#3a3939","background":"#131313","error":"#ffb4ab","primary":"#adc6ff","on-background":"#e5e2e1","on-primary-container":"#00285c","inverse-surface":"#e5e2e1","on-surface":"#e5e2e1","inverse-on-surface":"#313030","outline":"#8b909f","on-secondary-container":"#bcbbc2","on-secondary-fixed-variant":"#46464c","tertiary-container":"#919095"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","margin":"1.5rem","space-xl":"2rem","gutter":"0.75rem","space-md":"0.75rem","space-lg":"1.25rem","space-sm":"0.5rem"},"fontFamily":{"headline-expression":["Inter"],"display-hero":["Inter"],"body-md":["Inter"],"label-sm":["Inter"],"keypad-digit":["Inter"],"display-hero-mobile":["Inter"],"keypad-utility":["Inter"],"keypad-symbol":["Inter"]},"fontSize":{"headline-expression":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero":["64px",{"lineHeight":"72px","letterSpacing":"-0.03em","fontWeight":"300"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}],"keypad-digit":["28px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero-mobile":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"300"}],"keypad-utility":["20px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"500"}],"keypad-symbol":["26px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface min-h-screen flex flex-col justify-between selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-14 w-full px-margin flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm tracking-widest uppercase font-semibold text-primary">EMC²</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Calculadora</span></div><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Modo estándar • v2.4</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface"><a aria-current="page" class="px-space-md py-space-xs rounded font-label-sm transition-colors bg-surface-container-high text-on-surface" data-path="calculator" href="#">Estándar</a><a class="px-space-md py-space-xs rounded font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="scientific" href="#">Científica</a><a class="px-space-md py-space-xs rounded font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="converter" href="#">Conversor</a><a class="px-space-md py-space-xs rounded font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="history-tape" href="#">Historial</a></nav><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 flex-1 flex flex-col items-center justify-center relative bg-[radial-gradient(#201f1f_1px,transparent_1px)] [background-size:24px_24px]"><div class="flex flex-col w-full items-center justify-center py-space-xl px-margin relative select-none">
+<!-- Ambient precision glow backdrop -->
+<div class="absolute w-[580px] h-[580px] rounded-full bg-primary/5 blur-[120px] pointer-events-none -top-12"></div>
+<!-- Master Stage Grid: Calculator Centerpiece flanked by Precision Modules -->
+<div class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start justify-center relative z-10">
+<!-- Left Utility Deck: History Tape / Memory Registers -->
+<div class="hidden lg:flex lg:col-span-3 flex-col gap-space-lg">
+<!-- Tape Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl backdrop-blur-xl transition-all duration-300 hover:bg-surface-container">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">receipt_long</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Cinta de Historial</span>
+</div>
+<button class="font-label-sm text-label-sm text-outline hover:text-error transition-colors px-space-xs py-0.5 rounded" id="clear-tape-btn">Limpiar</button>
+</div>
+<!-- History Operations Log -->
+<div class="space-y-space-md text-right font-mono" id="tape-list">
+<div class="p-space-sm rounded bg-surface-container-lowest/60 hover:bg-surface-container-high transition-colors cursor-pointer group" onclick="recallExpression('2,500 ÷ 4', '625')">
+<div class="text-[11px] text-on-surface-variant font-body-md group-hover:text-primary transition-colors">2,500 ÷ 4</div>
+<div class="text-headline-expression font-headline-expression text-on-surface font-light">= 625</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest/60 hover:bg-surface-container-high transition-colors cursor-pointer group" onclick="recallExpression('125 × 8', '1,000')">
+<div class="text-[11px] text-on-surface-variant font-body-md group-hover:text-primary transition-colors">125 × 8</div>
+<div class="text-headline-expression font-headline-expression text-on-surface font-light">= 1,000</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high/90 hover:bg-surface-container-highest transition-colors cursor-pointer group" onclick="recallExpression('125 × 8 + 450', '1,450')">
+<div class="flex items-center justify-between text-[10px] text-primary font-semibold mb-0.5">
+<span class="uppercase tracking-widest text-[9px] px-1 py-0.2 bg-primary/20 text-primary-fixed rounded">Actual</span>
+<span class="text-on-surface-variant font-mono">125 × 8 + 450</span>
+</div>
+<div class="text-headline-expression font-headline-expression text-white font-medium">= 1,450</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Memoria (M+)</span>
+<span class="font-mono text-primary font-semibold">1,450.00</span>
+</div>
+</div>
+<!-- Quick Metrics Sparkline Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl backdrop-blur-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Actividad de Cálculo</span>
+<span class="material-symbols-outlined text-outline text-[16px]">show_chart</span>
+</div>
+<div class="h-16 w-full flex items-end gap-1.5 pt-2">
+<div class="flex-1 bg-surface-container-highest rounded-t-sm h-[35%] hover:bg-primary transition-colors" title="12 ops"></div>
+<div class="flex-1 bg-surface-container-highest rounded-t-sm h-[55%] hover:bg-primary transition-colors" title="24 ops"></div>
+<div class="flex-1 bg-surface-container-highest rounded-t-sm h-[40%] hover:bg-primary transition-colors" title="18 ops"></div>
+<div class="flex-1 bg-surface-container-highest rounded-t-sm h-[85%] hover:bg-primary transition-colors" title="42 ops"></div>
+<div class="flex-1 bg-surface-container-highest rounded-t-sm h-[65%] hover:bg-primary transition-colors" title="31 ops"></div>
+<div class="flex-1 bg-primary rounded-t-sm h-[95%]" title="50 ops"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] text-outline mt-2 font-mono">
+<span>T-5m</span>
+<span>Actual: 48 ops/min</span>
+</div>
+</div>
+</div>
+<!-- Central Chassis: Apple High-End Hardware Unit (380px) -->
+<div class="lg:col-span-6 flex flex-col items-center justify-center w-full">
+<div class="w-full max-w-[380px] bg-surface-container-low/95 rounded-[28px] p-space-lg shadow-[0_32px_64px_-12px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.08)] backdrop-blur-2xl transition-all duration-300" id="calculator-housing">
+<!-- Header Strip -->
+<div class="flex items-center justify-between pb-space-md mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[20px]">calculate</span>
+<div class="flex items-baseline font-bold tracking-tight">
+<span class="text-white text-base font-headline-expression font-semibold">EMC</span>
+<span class="text-primary text-xs font-semibold -translate-y-1">2</span>
+</div>
+</div>
+<!-- Status Pill -->
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-highest">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-[10px] text-on-surface uppercase tracking-wider">Estándar</span>
+</div>
+<!-- Context Control Buttons -->
+<div class="flex items-center gap-space-xs">
+<button class="w-7 h-7 rounded-full flex items-center justify-center bg-surface-container-highest/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-white transition-colors" id="toggle-sound-btn" title="Sonido háptico">
+<span class="material-symbols-outlined text-[15px]">volume_up</span>
+</button>
+<button class="w-7 h-7 rounded-full flex items-center justify-center bg-surface-container-highest/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-white transition-colors" id="quick-history-btn" title="Ver cinta rápida">
+<span class="material-symbols-outlined text-[15px]">history</span>
+</button>
+</div>
+</div>
+<!-- Display Stage -->
+<div class="bg-surface-container-lowest/90 rounded-2xl p-space-lg mb-space-lg shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] flex flex-col justify-end min-h-[136px] relative overflow-hidden group cursor-pointer" id="display-stage" onclick="copyToClipboard()" title="Clic para copiar">
+<!-- Ambient display glow -->
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Top Status Row in Display -->
+<div class="flex items-center justify-between w-full mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="text-[9px] font-mono tracking-widest font-semibold px-1 rounded bg-surface-container text-on-surface-variant">DEG</span>
+<span class="text-[9px] font-mono tracking-widest font-semibold px-1 rounded bg-surface-container text-primary">M</span>
+</div>
+<!-- Secondary Calculation Stack -->
+<div class="font-headline-expression text-headline-expression text-on-surface-variant text-right font-normal tracking-wide overflow-hidden text-ellipsis whitespace-nowrap" id="secondary-display">
+              125 × 8 + 450
+            </div>
+</div>
+<!-- Primary Hero Output -->
+<div class="w-full flex items-baseline justify-end relative">
+<span class="font-display-hero text-display-hero text-white font-light tracking-tight tabular-nums select-all transition-all duration-150 leading-none" id="primary-display">
+              1,450
+            </span>
+</div>
+<!-- Copy Toast Feedback Overlay -->
+<div class="absolute inset-0 bg-surface-container-high/95 backdrop-blur-md flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-200" id="copy-toast">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Copiado al portapapeles</span>
+</div>
+</div>
+</div>
+<!-- Keypad Matrix (4 cols x 5 rows, strict 12px gap) -->
+<div class="grid grid-cols-4 gap-gutter" id="keypad">
+<!-- Row 1: Utilities & High Operator -->
+<button class="h-14 rounded-2xl bg-secondary-container text-white font-keypad-utility text-keypad-utility font-medium shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12),0_2px_4px_0_rgba(0,0,0,0.5)] active:scale-95 active:bg-surface-container-high transition-transform duration-100 flex items-center justify-center hover:brightness-110" data-action="clear" data-key="Escape">
+            AC
+          </button>
+<button class="h-14 rounded-2xl bg-secondary-container/80 text-white font-keypad-utility text-keypad-utility font-medium shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_2px_4px_0_rgba(0,0,0,0.5)] active:scale-95 active:bg-surface-container-high transition-transform duration-100 flex items-center justify-center hover:brightness-110" data-action="negate">
+            ±
+          </button>
+<button class="h-14 rounded-2xl bg-secondary-container/80 text-white font-keypad-utility text-keypad-utility font-medium shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_2px_4px_0_rgba(0,0,0,0.5)] active:scale-95 active:bg-surface-container-high transition-transform duration-100 flex items-center justify-center hover:brightness-110" data-action="percent">
+            %
+          </button>
+<button class="h-14 rounded-2xl bg-primary-container text-white font-keypad-symbol text-keypad-symbol font-medium shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_12px_rgba(74,142,255,0.35)] active:scale-95 active:brightness-90 transition-all duration-100 flex items-center justify-center hover:brightness-110" data-key="/" data-op="÷">
+            ÷
+          </button>
+<!-- Row 2: 7, 8, 9, Multiply -->
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="7">
+            7
+          </button>
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="8">
+            8
+          </button>
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="9">
+            9
+          </button>
+<button class="h-14 rounded-2xl bg-primary-container text-white font-keypad-symbol text-keypad-symbol font-medium shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_12px_rgba(74,142,255,0.35)] active:scale-95 active:brightness-90 transition-all duration-100 flex items-center justify-center hover:brightness-110" data-key="*" data-op="×">
+            ×
+          </button>
+<!-- Row 3: 4, 5, 6, Subtract -->
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="4">
+            4
+          </button>
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="5">
+            5
+          </button>
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="6">
+            6
+          </button>
+<button class="h-14 rounded-2xl bg-primary-container text-white font-keypad-symbol text-keypad-symbol font-medium shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_12px_rgba(74,142,255,0.35)] active:scale-95 active:brightness-90 transition-all duration-100 flex items-center justify-center hover:brightness-110" data-key="-" data-op="−">
+            −
+          </button>
+<!-- Row 4: 1, 2, 3, Add -->
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="1">
+            1
+          </button>
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="2">
+            2
+          </button>
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="3">
+            3
+          </button>
+<button class="h-14 rounded-2xl bg-primary-container text-white font-keypad-symbol text-keypad-symbol font-medium shadow-[inset_0_1px_0_0_rgba(255,255,255,0.25),0_4px_12px_rgba(74,142,255,0.35)] active:scale-95 active:brightness-90 transition-all duration-100 flex items-center justify-center hover:brightness-110" data-key="+" data-op="+">
+            +
+          </button>
+<!-- Row 5: Backspace, 0, Point, Equals (Anchor) -->
+<button class="h-14 rounded-2xl bg-surface-container-high text-on-surface-variant font-keypad-digit text-keypad-digit shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:text-white hover:bg-surface-container-highest" data-action="backspace" data-key="Backspace">
+<span class="material-symbols-outlined text-[20px]">backspace</span>
+</button>
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key="0">
+            0
+          </button>
+<button class="h-14 rounded-2xl bg-surface-container-high text-white font-keypad-digit text-keypad-digit font-normal shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_2px_4px_0_rgba(0,0,0,0.4)] active:scale-95 active:bg-surface-container transition-transform duration-100 flex items-center justify-center hover:bg-surface-container-highest" data-key=".">
+            .
+          </button>
+<button class="h-14 rounded-2xl bg-primary-container text-white font-keypad-symbol text-[30px] font-bold shadow-[inset_0_1px_0_0_rgba(255,255,255,0.35),0_6px_20px_rgba(74,142,255,0.5)] active:scale-95 active:brightness-95 transition-all duration-100 flex items-center justify-center hover:brightness-115" data-action="equals" data-key="Enter">
+            =
+          </button>
+</div>
+</div>
+</div>
+<!-- Right Precision Deck: Interactive Design Tokens & Hardware Specs -->
+<div class="hidden lg:flex lg:col-span-3 flex-col gap-space-lg">
+<!-- Interaction States Reference -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl backdrop-blur-xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Estados Físicos</span>
+<span class="material-symbols-outlined text-outline text-[16px]">touch_app</span>
+</div>
+<div class="space-y-space-md">
+<!-- State: Default -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-xs text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">7</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Reposo</span>
+</div>
+<span class="text-[11px] font-mono text-outline">#2A2A2A</span>
+</div>
+<!-- State: Hover -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-xs text-white shadow-[0_0_8px_rgba(255,255,255,0.15)]">7</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hover</span>
+</div>
+<span class="text-[11px] font-mono text-outline">+12% Lum</span>
+</div>
+<!-- State: Active / Pressed -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container scale-95 flex items-center justify-center text-xs text-white shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]">7</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Presión</span>
+</div>
+<span class="text-[11px] font-mono text-outline">Scale 0.96</span>
+</div>
+<!-- State: Operator Active -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-xs text-white shadow-[0_0_12px_rgba(74,142,255,0.6)]">+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Operador</span>
+</div>
+<span class="text-[11px] font-mono text-primary font-semibold">Electric Blue</span>
+</div>
+</div>
+</div>
+<!-- Quick Shortcuts Guide -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl backdrop-blur-xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Atajos Directos</span>
+<span class="material-symbols-outlined text-outline text-[16px]">keyboard</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-xs rounded bg-surface-container-lowest/80 flex items-center justify-between">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-mono text-white">Esc</kbd>
+<span class="text-[11px] text-on-surface-variant">Reset (AC)</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest/80 flex items-center justify-between">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-mono text-white">Enter</kbd>
+<span class="text-[11px] text-on-surface-variant">Calcular</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest/80 flex items-center justify-between">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-mono text-white">⌫ Del</kbd>
+<span class="text-[11px] text-on-surface-variant">Borrar dígito</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest/80 flex items-center justify-between">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-mono text-white">% / *</kbd>
+<span class="text-[11px] text-on-surface-variant">Operadores</span>
+</div>
+</div>
+</div>
+<!-- System Calibration Pill -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center gap-space-md shadow-xl">
+<div class="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0 animate-ping"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-white">Motor de Precisión 64-bit IEEE 754</span>
+<span class="text-[10px] text-outline font-mono">Tolerancia: 1e-15 • Cero latencia</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Haptic & Interactive Engine Script -->
+<script>
+    (function() {
+      let currentInput = "1450";
+      let expression = "125 × 8 + 450";
+      let isResultShown = true;
+      let soundEnabled = true;
+
+      const primaryDisplay = document.getElementById("primary-display");
+      const secondaryDisplay = document.getElementById("secondary-display");
+      const copyToast = document.getElementById("copy-toast");
+      const soundBtn = document.getElementById("toggle-sound-btn");
+      const tapeList = document.getElementById("tape-list");
+      const clearTapeBtn = document.getElementById("clear-tape-btn");
+
+      // Optional Synthetic Audio Click for Physicality
+      const audioCtx = (window.AudioContext || window.webkitAudioContext) ? new (window.AudioContext || window.webkitAudioContext)() : null;
+      function playClickSound(freq = 440) {
+        if (!soundEnabled || !audioCtx) return;
+        try {
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = "sine";
+          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.04);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.04);
+        } catch(e){}
+      }
+
+      function formatNumber(numStr) {
+        if (!numStr || numStr === "Error") return numStr;
+        const clean = numStr.replace(/,/g, '');
+        const parts = clean.split('.');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        return parts.join('.');
+      }
+
+      function updateDisplay() {
+        primaryDisplay.textContent = formatNumber(currentInput);
+        secondaryDisplay.textContent = expression;
+        // Text shrink for long strings
+        if (currentInput.length > 9) {
+          primaryDisplay.classList.remove('text-display-hero');
+          primaryDisplay.classList.add('text-display-hero-mobile');
+        } else {
+          primaryDisplay.classList.remove('text-display-hero-mobile');
+          primaryDisplay.classList.add('text-display-hero');
+        }
+      }
+
+      function addTapeEntry(exp, res) {
+        if (!tapeList) return;
+        const row = document.createElement("div");
+        row.className = "p-space-sm rounded bg-surface-container-lowest/60 hover:bg-surface-container-high transition-colors cursor-pointer group";
+        row.onclick = () => recallExpression(exp, res);
+        row.innerHTML = `
+          <div class="text-[11px] text-on-surface-variant font-body-md group-hover:text-primary transition-colors">${exp}</div>
+          <div class="text-headline-expression font-headline-expression text-on-surface font-light">= ${res}</div>
+        `;
+        tapeList.prepend(row);
+      }
+
+      window.recallExpression = function(exp, res) {
+        expression = exp;
+        currentInput = res.replace(/,/g, '');
+        isResultShown = true;
+        updateDisplay();
+        playClickSound(520);
+      };
+
+      window.copyToClipboard = function() {
+        const valueToCopy = currentInput.replace(/,/g, '');
+        navigator.clipboard.writeText(valueToCopy).then(() => {
+          copyToast.classList.remove("opacity-0", "pointer-events-none");
+          setTimeout(() => {
+            copyToast.classList.add("opacity-0", "pointer-events-none");
+          }, 1200);
+        });
+        playClickSound(660);
+      };
+
+      function calculate() {
+        if (!expression && !currentInput) return;
+        try {
+          const evalExp = (expression + currentInput)
+            .replace(/×/g, '*')
+            .replace(/÷/g, '/')
+            .replace(/−/g, '-');
+          
+          // Basic sanitization
+          if (!/^[0-9+\-*/. ]+$/.test(evalExp)) return;
+
+          const res = Function(`'use strict'; return (${evalExp})`)();
+          const resStr = Number.isFinite(res) ? String(parseFloat(res.toFixed(8))) : "Error";
+          
+          addTapeEntry(expression + " " + currentInput, formatNumber(resStr));
+          expression = "";
+          currentInput = resStr;
+          isResultShown = true;
+          updateDisplay();
+          playClickSound(600);
+        } catch(e) {
+          currentInput = "Error";
+          isResultShown = true;
+          updateDisplay();
+        }
+      }
+
+      document.getElementById("keypad").addEventListener("click", (e) => {
+        const btn = e.target.closest("button");
+        if (!btn) return;
+
+        playClickSound(480);
+
+        const key = btn.dataset.key;
+        const action = btn.dataset.action;
+        const op = btn.dataset.op;
+
+        if (action === "clear") {
+          currentInput = "0";
+          expression = "";
+          isResultShown = false;
+        } else if (action === "backspace") {
+          if (isResultShown) {
+            currentInput = "0";
+            isResultShown = false;
+          } else {
+            currentInput = currentInput.length > 1 ? currentInput.slice(0, -1) : "0";
+          }
+        } else if (action === "negate") {
+          if (currentInput !== "0" && currentInput !== "Error") {
+            currentInput = currentInput.startsWith("-") ? currentInput.slice(1) : "-" + currentInput;
+          }
+        } else if (action === "percent") {
+          if (currentInput !== "Error") {
+            const val = parseFloat(currentInput) / 100;
+            currentInput = String(val);
+            isResultShown = true;
+          }
+        } else if (op) {
+          expression = `${currentInput} ${op} `;
+          currentInput = "0";
+          isResultShown = false;
+        } else if (action === "equals") {
+          calculate();
+          return;
+        } else if (key) {
+          if (key === ".") {
+            if (!currentInput.includes(".")) {
+              currentInput += ".";
+              isResultShown = false;
+            }
+          } else {
+            if (currentInput === "0" || isResultShown) {
+              currentInput = key;
+              isResultShown = false;
+            } else {
+              if (currentInput.length < 14) {
+                currentInput += key;
+              }
+            }
+          }
+        }
+
+        updateDisplay();
+      });
+
+      // Keyboard support
+      window.addEventListener("keydown", (e) => {
+        const key = e.key;
+        const matchedBtn = document.querySelector(`button[data-key="${key}"]`);
+        if (matchedBtn) {
+          matchedBtn.classList.add("scale-95", "brightness-125");
+          setTimeout(() => matchedBtn.classList.remove("scale-95", "brightness-125"), 120);
+          matchedBtn.click();
+        } else if (key === "Escape") {
+          const ac = document.querySelector(`button[data-action="clear"]`);
+          if (ac) ac.click();
+        } else if (key === "h" || key === "H") {
+          const histBtn = document.getElementById("quick-history-btn");
+          if (histBtn) histBtn.click();
+        }
+      });
+
+      // Sound toggle
+      soundBtn.addEventListener("click", () => {
+        soundEnabled = !soundEnabled;
+        soundBtn.classList.toggle("text-primary", soundEnabled);
+        soundBtn.classList.toggle("text-outline", !soundEnabled);
+      });
+
+      // Clear tape
+      if (clearTapeBtn) {
+        clearTapeBtn.addEventListener("click", () => {
+          tapeList.innerHTML = `<div class="text-[11px] text-outline text-center py-4">Historial limpio</div>`;
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_-1px_8px_rgba(0,0,0,0.3)] py-space-sm"><div class="w-full px-margin flex flex-col sm:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-lg text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><kbd class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface text-[10px] font-mono">Esc</kbd><span>Limpiar</span></div><div class="flex items-center gap-space-xs"><kbd class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface text-[10px] font-mono">↵</kbd><span>Calcular</span></div><div class="flex items-center gap-space-xs"><kbd class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface text-[10px] font-mono">H</kbd><span>Historial</span></div></div><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><span class="hover:text-on-surface transition-colors cursor-pointer">Atajos</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="hover:text-on-surface transition-colors cursor-pointer">Ajustes</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="text-outline">EMC² Precision Lab</span></div></div></footer></body></html>
